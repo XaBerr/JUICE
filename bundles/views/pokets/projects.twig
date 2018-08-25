@@ -1,0 +1,87 @@
+<div class="col-lg-4 col-md-6 col-xs-12 project" project="{{project.name}}">
+  <div class="card">
+    <a class="project-link" href="projects/{{project.name}}" target="_blank">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-9 site">
+            <span>
+              <h5 class="card-title project-card-title">
+                  {{project.name}}
+              </h5>
+            </span>
+          </div>
+          <div class="col-sm-3 text-right">
+            <span class="badge badge-tag-color">
+              <i class="fas fa-tags"></i>
+              <span class="badge-tag">
+                {{ project.tag }}
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <small>
+              <b>Updated on</b> {{ project.date }}
+              <b>by</b> {{ project.author }}
+            </small>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg text-message project-message">
+            {{project.message}}
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="card-footer">
+      <div class="row">
+        <!-- Docs -->
+        <div class="col-3 text-center">
+          <span class="card-subtitle">
+            <a href="doc/{{project.name}}" target="_blank">
+              <i class="far fa-file"></i>
+              Doc
+            </a>
+          </span>
+        </div>
+        <!-- Commits -->
+        <div class="col-3 text-center">
+          <span class="card-subtitle">
+            <a href="detail/{{project.name}}" target="_blank">
+              <i class="far fa-clock"></i>
+              {% if project.numerOfCommits %}
+                {{ project.numerOfCommits }}
+              {% else %}
+                0
+              {% endif %}
+            </a>
+          </span>
+        </div>
+        <!-- Branches -->
+        <div class="col-3 text-center">
+          <span class="card-subtitle">
+            <i class="fas fa-code-branch"></i>
+            {% if project.numberOfBranches %}
+              {{ project.numberOfBranches }}
+            {% else %}
+              0
+            {% endif %}
+          </span>
+        </div>
+        <!-- Contributors -->
+        <div class="col-3 text-center">
+          <span class="card-subtitle">
+            <i class="fas fa-users"></i>
+            {% if project.numberOfContributors %}
+              {{ project.numberOfContributors }}
+            {% else %}
+              0
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

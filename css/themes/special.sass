@@ -1,0 +1,82 @@
+$background: rgb(64,64,64)
+$text: rgb(255,255,255)
+$link: #00ecb7
+$card: #E75CAE
+$input-border: rgba($text,.1)
+$black: black
+
+.theme-special
+  color: $text
+  background-color: $background
+  #search-bar, .progress
+    background-color: $background
+  a:not(.project-link), a:not(.project-link):not([href]), .project-card-title
+    color: $link
+  h1
+    color: $text
+  .card
+    background-color: rgba($card,.71)
+  input
+    background-color: transparent
+    color: $text
+    border-bottom-color: $input-border
+  hr
+    border-color: $text
+  .badge-tag-color
+    background-color: $link
+    i, .badge-tag
+      color: $card
+  &, #page, .card-body
+    &::-webkit-scrollbar-thumb
+      color: rgba($link,.2)
+      background: $link
+  .progress
+    background-color: transparent
+  .progress-bar
+    background-color: $card
+
+.card.theme-preview.theme-special
+  background-color: rgba($card,.71) !important
+  a, a:not([href])
+    color: $link !important
+
+.grid
+  z-index: -1
+  background: linear-gradient(180deg, transparent 0px, rgba(54,226,248,0.5) 0%, rgba(54,226,248,0.5) 3px, transparent 0px), linear-gradient(90deg, transparent 0px, rgba(54,226,248,0.5) 0%, rgba(54,226,248,0.5) 3px, transparent 0px)
+  background-size: 4em 4em, 4em 4em
+  background-color: black
+  border-top: 5px solid #d100b1
+  box-shadow: 0 -25px 45px #d100b1
+  height: 75em
+  transform: scale(1.26) rotateX(80deg)
+  -ms-transform: scale(1.26) rotateX(80deg)
+  -webkit-transform: scale(1.26) rotateX(80deg)
+  position: fixed
+  width: 100%
+  &:after
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,1) 95%)
+    content: ''
+    height: 100%
+    position: absolute
+    width: 100%
+  &:before
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(209,0,177,0.5) 90%)
+    content: ''
+    height: 100%
+    position: absolute
+    width: 100%
+
+
+#container
+  perspective: 1200px
+  background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%, rgba(0,0,0,0.8) 60%, #000 90%), url(../../img/backgroundSpecial.jpg)
+  background-repeat: no-repeat
+  background-size: auto 100%
+  background-position: center top
+  background-attachment: fixed
+  overflow: hidden
+  height: 100vh
+
+#page
+  overflow-y: auto
+  height: 100%

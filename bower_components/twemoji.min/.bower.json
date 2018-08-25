@@ -1,0 +1,12 @@
+{
+  "name": "twemoji.min",
+  "_cacheHeaders": {
+    "Last-Modified": "Tue, 10 Jul 2018 18:40:49 GMT",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "main": "index.js",
+  "_source": "http://twemoji.maxcdn.com/2/twemoji.min.js?2.5",
+  "_target": "*",
+  "_originalSource": "http://twemoji.maxcdn.com/2/twemoji.min.js?2.5",
+  "_direct": true
+}

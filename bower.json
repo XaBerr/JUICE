@@ -1,0 +1,24 @@
+{
+  "name": "JUICE",
+  "homepage": "https://github.com/XaBerr/JUICE",
+  "authors": [
+    "federico berra <fede.berra@hotmail.it>"
+  ],
+  "description": "JATE User Interface CMS Engine",
+  "main": "jate.php",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "JUICE",
+    "JATE",
+    "PHP",
+    "TEMPLATE",
+    "ENGINE"
+  ],
+  "license": "free",
+  "dependencies": {
+    "openSans": "https://google-fonts.azurewebsites.net/googleFonts/openSans?family=Open+Sans",
+    "quicksand": "https://google-fonts.azurewebsites.net/googleFonts/quicksand?family=Quicksand"
+  }
+}

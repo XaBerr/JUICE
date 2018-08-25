@@ -1,0 +1,32 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    checks:
+      Controversial/CamelCaseParameterName:
+        enabled: false
+      Controversial/CamelCaseVariableName:
+        enabled: false
+ratings:
+  paths:
+    - "**.js"
+    - "**.php"
+    - "**.sass"
+    - "**.html"
+    - "**.twig"
+    - "**.pug"
+    - "**.jade"
+exclude_paths:
+  - git/**/*
+  - bower_components/**/*
+  - "**/*.min.js"
+  - "*.min.js"
+  - "**/*.min.css"
+  - "*.min.css"

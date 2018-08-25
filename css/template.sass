@@ -1,0 +1,78 @@
+body
+  font-size: 16px
+
+#projects-list
+  padding-top: 87px
+
+#search-bar
+  position: fixed
+  z-index: 1
+  background: black
+
+#search-bar, #back
+  font-size: 30px
+  width: 100%
+  border: 0px
+  padding: 0px 5px 5px 5px
+  margin-bottom: 15px
+  &:active, &:hover, &:focus
+    text-decoration: none
+    outline: none
+  input
+    border: 0px
+    width: 100%
+    padding-left: 50px
+    border-bottom: 1px solid
+    &:focus
+      outline: none
+  a
+    position: absolute
+    top: 0px
+    left: 10px
+
+.projectDoc
+  word-wrap: break-word
+
+.card
+  margin-bottom: 20px
+
+.theme-preview
+  cursor: pointer
+
+.project-message
+  height: 100px
+  overflow-y: auto
+  word-wrap: break-word
+
+.project-link
+  text-decoration: none
+  color: inherit
+  &:hover
+    text-decoration: none
+    border-bottom: solid 1px
+    color: inherit
+
+.progress
+  height: 3px
+
+.card-body
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px
+  &::-webkit-scrollbar
+    width: 5px
+    height: 5px
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px
+
+#page, body
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px
+  &::-webkit-scrollbar
+    width: 12px
+    height: 5px
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 6px

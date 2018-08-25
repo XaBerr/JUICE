@@ -1,0 +1,9 @@
+{
+  "defaultPage" : ["Page404", []],
+  "pages": [
+    ["/Page404", "Page404", []],
+    ["/",        "Home",    []],
+    ["/Home",    "Home",    [1,2,3]],
+    ["/Page1",   "Page01",  []]
+  ]
+}

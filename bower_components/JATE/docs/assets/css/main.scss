@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+
+
+// CUSTOM
+$c-main: #ff005a;
+$c-secondary: #9f002d;
+
+$background-color: #fefefe !default;
+$text-color: #40514e !default;
+$muted-text-color: #40514e !default;
+$primary-color: $c-main !default;
+$border-color: mix(#fff, #40514e, 75%) !default;
+$footer-background-color: #F4F2F3 !default;
+
+$link-color: $c-main !default;
+$masthead-link-color: $c-main !default;
+$masthead-link-color-hover: $c-secondary !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+
+@import "minimal-mistakes"; // main partials
+
+.page__content a:not(.btn):not(#goog-wm-sb) img {
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.page__content a:not(.btn):not(#goog-wm-sb):hover img {
+    box-shadow: 0 0 10px $c-main;
+}
+
+.masthead__inner-wrap {
+  padding: 5px;
+}
+
+.site-title {
+  font-size: 30px
+}
+
+.brand {
+  height: 30px;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+
+.nav__list .nav__items .active {
+  color: $c-main;
+  text-decoration-color: $c-main;
+}

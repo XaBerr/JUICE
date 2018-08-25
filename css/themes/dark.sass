@@ -1,0 +1,42 @@
+$background: #263238
+$text: rgb(255,255,255)
+$link: #40e3ff
+$card: #37474F
+$input-border: rgba($text,.1)
+
+.theme-dark
+  color: $text
+  background-color: $background
+  #container
+    background-image: none
+  #search-bar, .progress
+    background-color: $background
+  a:not(.project-link), a:not(.project-link):not([href]), .project-card-title
+    color: $link
+  h1
+    color: $text
+  .card
+    background-color: rgba($card,.71)
+  input
+    background-color: transparent
+    color: $text
+    border-bottom-color: $input-border
+  hr
+    border-color: $text
+  .badge-tag-color
+    background-color: $link
+    i, .badge-tag
+      color: $card
+  &, #page, .card-body
+    &::-webkit-scrollbar-thumb
+      color: rgba($link,.2)
+      background: $link
+  .progress
+    background-color: transparent
+  .progress-bar
+    background-color: $link
+
+.card.theme-preview.theme-dark
+  background-color: $background !important
+  a, a:not([href])
+    color: $link !important

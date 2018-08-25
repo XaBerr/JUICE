@@ -1,0 +1,28 @@
+<div class="col themes">
+  <div class="row">
+    <div class="col" id="back">
+      <a href="">
+        <i class="fas fa-caret-square-left"></i>
+      </a>
+      <h1 class="text-center">Select your theme</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    {% for theme in themes %}
+      <div class="col-sm-6">
+        <div class="card theme-preview theme-{{theme}}" theme="theme-{{theme}}">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-9">
+                <h5 class="card-title"><a>{{theme|capitalize}} Theme</a></h5>
+              </div>
+              <div class="col-3 text-right theme-info"></div>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

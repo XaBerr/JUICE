@@ -1,0 +1,11 @@
+{
+  "defaultPage" : ["Page404", []],
+  "pages": [
+    ["/Page404",                  "Page404",        []],
+    ["/",                         "Projects",       []],
+    ["/detail/$project",          "ProjectDetail",  []],
+    ["/doc/$project",             "ProjectDoc",     []],
+    ["/ajax",                     "Ajax",           []],
+    ["/themes",                   "Themes",         []]
+  ]
+}

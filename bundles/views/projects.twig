@@ -1,0 +1,18 @@
+<div class="col projects">
+  <div class="row">
+    <div class="col" id="search-bar">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <a href="themes">
+        <i class="fas fa-cogs"></i>
+      </a>
+      <input name="search" type="text" placeholder="Search" id="search">
+    </div>
+  </div>
+  <div class="row" id="projects-list">
+    {% for project in projects %}
+      {{project|raw}}
+    {% endfor %}
+  </div>
+</div>
