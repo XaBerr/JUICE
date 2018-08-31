@@ -3,7 +3,7 @@
     public function init() {
       parent::init();
       $this->tags["title"]  .= "404";
-      $this->tags["content"] = jBlockFile("bundles/views/page404.html", []);
+      $this->tags["content"] = view("page404.html", []);
     }
   }
 ?>

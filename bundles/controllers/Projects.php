@@ -12,7 +12,7 @@
       foreach ( $sites as $project )
         if(is_dir("$dir/projects/$project"))
             $projects[] = Pocket::drawLite($project);
-      return jBlockFile("bundles/views/projects.twig", [
+      return view("projects.twig", [
         "projects" => $projects,
         "config"   => [
           "newTab"    => 'target ="_blank"',

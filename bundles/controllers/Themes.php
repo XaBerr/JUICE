@@ -8,7 +8,7 @@
       $this->addFiles($this->getThemeCss());
     }
     public function makePage() {
-      return jBlockFile("bundles/views/themes.twig", [
+      return view("themes.twig", [
         "themes" => $this->themes,
         "config" => [
           "newTab"    => 'target ="_blank"',

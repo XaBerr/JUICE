@@ -6,7 +6,7 @@
       $this->tags["content"]  = $this->makePage( $this->page["project"] );
     }
     public function makePage( $_project ) {
-      return jBlockFile("bundles/views/projectDetail.twig", [
+      return view("projectDetail.twig", [
         "projectName" => $_project,
         "projects"    => Project::getDetail($_project),
         "config" => [

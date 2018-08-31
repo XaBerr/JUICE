@@ -1,0 +1,13 @@
+{
+  "enable":    true,
+  "user":      "user",
+  "password":  "password",
+  "database":  "test",
+  "server":    "localhost",
+  "engine": {
+    "pdo-mysql":         false,
+    "pdo-sqlite-memory": true,
+    "mysqli":            false,
+    "postgresql":        false
+  }
+}

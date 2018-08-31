@@ -7,7 +7,7 @@
     }
     public function makePage( $_project ) {
       $dir = getcwd();
-      return jBlockFile("bundles/views/projectDoc.twig", [
+      return view("projectDoc.twig", [
         "data" => jBLockFile("projects/{$this->page["project"]}/README.md")
       ]);
     }
