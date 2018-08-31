@@ -8,35 +8,30 @@ $(document).ready(function() {
   project.size = $(".project").length;
   getTheme();
   autoFocus();
-  $('#search').on('blur', function() {
-    autoFocus();
-  });
+  initSelected();
+  updateProjects(1);
   $("#search").keyup(function(event) {
     search();
   });
-  initSelected();
   $(".theme-preview").click(function() {
     setCookie("theme", $(this).attr("theme"), 700);
     window.location.reload();
   });
-  updateProjects(1);
   $(".project-link").click(function(event) {
     window.open($(this).attr('href'), '_blank');
   });
 });
 
+//################_SEARCH_################
+
 function autoFocus() {
   setTimeout(function() {
     $('#search').focus()
   }, 10);
-}
 
-function updateProjects( _time ) {
-  setTimeout(function() {
-    $(".project").each(function(index, el) {
-      ajax("drawFull", {"project": $(this).attr("project")});
-    });
-  }, _time);
+  $('#search').on('blur', function() {
+    autoFocus();
+  });
 }
 
 function search() {
@@ -49,25 +44,6 @@ function search() {
   } else {
     $(".find-result").html("");
   }
-}
-
-function ajax(_action, _obj) {
-  $.post('ajax', {
-      "action": _action,
-      "data"  : JSON.stringify(_obj)
-    }, function(data, textStatus, xhr) {
-      var temp = JSON.parse(data);
-      if(project.update)
-        $("[project="+temp.project+"]").replaceWith(temp.html);
-      search();
-      project.current++;
-      $(".progress-bar").css("width", (project.current/project.size*100)+"%");
-      if(project.current == project.size) {
-        project.current = 0;
-        $(".progress-bar").css("width", (project.current/project.size*100)+"%");
-        updateProjects(10000);
-      }
-  });
 }
 
 function filter(_array) {
@@ -110,6 +86,8 @@ function initSelected() {
   }
 }
 
+//################_THEMES_################
+
 function getTheme() {
   var themeSelected = getCookie("theme");
   var css = themeSelected.replace("theme-", "");
@@ -145,6 +123,53 @@ function setCookie(cname, cvalue, exdays) {
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//################_POCKET_UPDATE_################
+
+function updateProjects( _time ) {
+  setTimeout(function() {
+    $(".project").each(function(index, el) {
+      postGetPocket("drawFull", {"project": $(this).attr("project")});
+    });
+  }, _time);
+}
+
+function postGetPocket(_action, _obj) {
+  $.post('ajax', {
+      "action": _action,
+      "data"  : JSON.stringify(_obj)
+    }, function(data, textStatus, xhr) {
+      var temp = JSON.parse(data);
+      if(project.update)
+        $("[project="+temp.project+"]").replaceWith(temp.html);
+      search();
+      project.current++;
+      $(".progress-bar").css("width", (project.current/project.size*100)+"%");
+      if(project.current == project.size) {
+        project.current = 0;
+        $(".progress-bar").css("width", (project.current/project.size*100)+"%");
+        updateProjects(10000);
+      }
+  });
+}
+
+//################_OTHERS_################
+
+function ps( _class, _data, _callback ) {
+  // hello;
+  $(_class).click(function(event) {
+    ajax("ajax", _data);
+  });
+}
+
+function ajax(_action, _obj, _callback) {
+  $.post('ajax', {
+      "action": _action,
+      "data"  : JSON.stringify(_obj)
+    }, function(data, textStatus, xhr) {
+      _callback(data);
+  });
 }
 
 Array.prototype.unique = function() {
