@@ -16,6 +16,7 @@ class Template extends Html {
       "bower_components/quicksand/quicksand.css",
       "bower_components/components-font-awesome/css/fontawesome-all.min.css",
       "css/template.min.css",
+      "css/navbar.min.css",
       "bower_components/jquery/dist/jquery.min.js",
       "bower_components/bootstrap/dist/js/bootstrap.min.js",
       "bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",

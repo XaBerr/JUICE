@@ -1,20 +1,71 @@
-<div class="col projects">
-  {# Search bar #}
-  <div class="row">
-    <div class="col" id="search-bar">
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="col projects p-0">
+  <div class="sidebar">
+    <div class="page-navigation-content">
+  <div class="navigation-navbar">
+    <div class="mobile-navbar">
+      <nav class="navbar navbar-dark d-flex d-sm-none d-flex justify-content-start d-flex">
+        <svg class="d-flex toggle-desktop" style="width:32px;height:32px" width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M5 15h14v2H5zm0-8h14v2H5zm0 4h14v2H5z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        <span class="d-flex h4 mb-0 ml-1">Todoysma</span>
+      </nav>
+    </div>
+    <div class="desktop-navbar">
+      <div class="navbar-global-navigation">
+        <div class="global-navigation-primary-content">
+          <div class="global-navigation-primary-actions">
+            <div class="primary-actions-primary-item">
+              <a class="global-navigation-brand" href="">
+                <div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M18 12v8.004c0 .55-.456.996-1.002.996H7.002A.998.998 0 0 1 6 20.004V12H3.993c-.548 0-.673-.32-.287-.706l7.941-7.941a.497.497 0 0 1 .706 0l7.94 7.94c.39.39.262.707-.286.707H18zm-8 4.998V21h4v-4.002a2 2 0 0 0-4 0z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                </div>
+              </a>
+            </div>
+            <div class="primary-actions-primary-item pt-2">
+              <a class="global-navigation-brand" href="">
+                <div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M13 11V3.993A.997.997 0 0 0 12 3c-.556 0-1 .445-1 .993V11H3.993A.997.997 0 0 0 3 12c0 .557.445 1 .993 1H11v7.007c0 .548.448.993 1 .993.556 0 1-.445 1-.993V13h7.007A.997.997 0 0 0 21 12c0-.556-.445-1-.993-1H13z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                </div>
+              </a>
+            </div>
+            <div class="primary-actions-primary-item pt-2">
+              <a class="global-navigation-brand" href="themes">
+                <div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M6.486 13.728c-1.593 1.599-.248 3.24-2.364 5.674-.955 1.098 3.932.763 6.354-1.668 1.027-1.03.737-2.534-.364-3.64-1.102-1.106-2.6-1.397-3.626-.366zm13.471-9.685c-.537-.548-6.733 4.25-8.503 6.058-.878.897-1.171 1.378-1.44 1.738-.118.156.037.204.107.241.348.184.842.507 1.156.828.315.321.665.815.84 1.161.036.071.083.23.236.11.352-.275.823-.574 1.701-1.472 1.77-1.807 6.44-8.115 5.903-8.664z" fill="currentColor"></path></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="themes">
-        <i class="fas fa-cogs"></i>
-      </a>
-      <input name="search" type="text" placeholder="Search" id="search">
+    </div>
+    <div class="background-opacized d-none"></div>
+    <div>
+      <div class="styled-fSMZzE kBZnBC"></div>
+    </div>
+    <div>
+      <div class="styled-fSMZzE kBZnBC"></div>
     </div>
   </div>
-  {# Projects #}
-  <div class="row" id="projects-list">
-    {% for project in projects %}
-      {{project|raw}}
-    {% endfor %}
+  <div class="page-page-content">
+      {# Search bar #}
+      <div class="col sticky-top" id="search-bar">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div>
+        <div class="search-content align-items-center d-flex">
+          <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M16.436 15.085l3.94 4.01a1 1 0 0 1-1.425 1.402l-3.938-4.006a7.5 7.5 0 1 1 1.423-1.406zM10.5 16a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          <input name="search" type="text" placeholder="Search" id="search">
+        </div>
+        
+        </div>
+      </div>
+    {# Projects #}
+    <div class="col px-3" id="projects-list">
+      <div class="row">
+      {% for project in projects %}
+        {{project|raw}}
+      {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
