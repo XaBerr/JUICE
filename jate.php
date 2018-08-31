@@ -2,11 +2,12 @@
   if(!isset($GLOBALS["JATEPath"]))
     $GLOBALS["JATEPath"] = [];
   $commonLocations = [
-      "bower_components/JATE/dist/"
-    , "vendor/xaberr/jate/dist/"
-    , "../../dist/"
-    , "../dist/"
-    , dirname(__FILE__)."/"
+    "bower_components/JATE/dist/",
+    "vendor/xaberr/jate/dist/",
+    "../../dist/",
+    "../dist/",
+    dirname(__FILE__)."/",
+    "JATE/dist/"
   ];
   $jSuccess = false;
   foreach ($commonLocations as $path)
