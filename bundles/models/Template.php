@@ -21,6 +21,7 @@ class Template extends Html {
       "bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
       "bower_components/twemoji.min/index.js",
       "js/template.min.js",
+      "https://fonts.googleapis.com/css?family=Roboto:100,300,400,700"
     ]);
   }
 }
