@@ -7,7 +7,8 @@ class Template extends Html {
       "metaDescription" => "Projects dashboard",
       "metaKeywords"    => "JUICE,PHP,JS,CSS",
       "metaAuthor"      => "XaBerr",
-      "menu"            => ""
+      "menu"            => "",
+      "favicon"         => "img/brand/favicon.png"
     ];
     $this->template = "bundles/views/tradictional.twig";
     $this->addFilesRequired([

@@ -1,9 +1,22 @@
-# JUICE
-New PHP Dashboard for your git project. Fresh and light design.
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/16030020/50683349-06bcc100-1012-11e9-894c-39f732c037e4.png" alt="logo" width=72 height=72>
+  <h3 align="center">JUICE</h3>
+  <p align="center">
+  New PHP Dashboard for your git project. Fresh and light design.
+    <br>
+    <a href="https://scrutinizer-ci.com/g/XaBerr/JUICE/?branch=master">
+      <img src="https://scrutinizer-ci.com/g/XaBerr/JUICE/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality">
+    </a>
+    <a href="https://codeclimate.com/github/XaBerr/JUICE">
+      <img src="https://codeclimate.com/github/XaBerr/JUICE/badges/gpa.svg" alt="Code Climate">
+    </a>
+    <a href="https://basicallydan.github.io/forkability/?u=XaBerr&r=JUICE&l=PHP">
+      <img src="https://img.shields.io/badge/forkable-yes-brightgreen.svg" alt="This is a forkable respository">
+    </a>
+  </p>
+</p>
+<br>
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/XaBerr/JUICE/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/XaBerr/JUICE/?branch=master)
-[![Code Climate](https://codeclimate.com/github/XaBerr/JUICE/badges/gpa.svg)](https://codeclimate.com/github/XaBerr/JUICE)
-[![This is a forkable respository](https://img.shields.io/badge/forkable-yes-brightgreen.svg)](https://basicallydan.github.io/forkability/?u=XaBerr&r=JUICE&l=PHP)
 
 ## REQUIREMENTS
 JUICE requires PHP 5.4 or higher.
